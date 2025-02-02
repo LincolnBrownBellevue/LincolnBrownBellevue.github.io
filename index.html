@@ -12,17 +12,36 @@
             text-align: center;
             background-color: #f4f4f9;
             color: #333;
+            scroll-behavior: smooth;
         }
         header {
             background-color: #4CAF50;
             color: white;
             padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
-        header h1 {
-            margin: 0;
+        header nav {
+            margin-top: 10px;
         }
-        main {
-            padding: 20px;
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 80px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
         }
         ul {
             list-style-type: none;
@@ -38,28 +57,57 @@
         a:hover {
             text-decoration: underline;
         }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Lincoln Brown</h1>
-        <p>Welcome to my portfolio! Check out my projects below.</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Work/Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
-    <main>
-        <h2>My Projects</h2>
-        <ul>
-            <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/01_ForecastingPricesQuadraticModel" target="_blank">Forecasting Prices with Quadratic Model</a></li>
-            <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/02_MoonPhaseEffects_onCrime" target="_blank">Effects of Moon Phase on Crime</a></li>
-            <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/03_HyperparameterTuning_MLModels" target="_blank">Hyperparameter Tuning on ML Models</a></li>
-            <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/04_PredictingRealEstatePrices_KimballNE" target="_blank">Predicting Real Estate Prices in Kimball, NE</a></li>
-            <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/05_PredictingRealEstatePrices_MelbourneAU" target="_blank">Predicting Real Estate Prices in Melbourne, AU</a></li>
-            <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/06_VisualizationsUsing_Tableau-R-Pyton" target="_blank">Visualizations using Tableau, R, and Python</a></li>
-            <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/07_BuildHadoopEcosystem_onVM" target="_blank">Building the Hadoop Ecosystem on a VM</a></li>
-            <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/08_CreditCardFraudDetection_SyntheticDatasets" target="_blank">Credit Card Fraud Detection with a Synthetic Dataset</a></li>
-            <li><a href="https://github.com/LincolnBrownBellevue/Portfolio" target="_blank">Project 9</a></li>
-            <li><a href="https://github.com/LincolnBrownBellevue/Portfolio" target="_blank">Project 10</a></li>
-        </ul>
-    </main>
+    
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Welcome to my portfolio! I am a data scientist passionate about machine learning, data visualization, and big data processing.</p>
+        </div>
+    </section>
+    
+    <section id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <ul>
+                <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/01_ForecastingPricesQuadraticModel" target="_blank">Forecasting Prices with Quadratic Model</a></li>
+                <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/02_MoonPhaseEffects_onCrime" target="_blank">Effects of Moon Phase on Crime</a></li>
+                <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/03_HyperparameterTuning_MLModels" target="_blank">Hyperparameter Tuning on ML Models</a></li>
+                <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/04_PredictingRealEstatePrices_KimballNE" target="_blank">Predicting Real Estate Prices in Kimball, NE</a></li>
+                <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/05_PredictingRealEstatePrices_MelbourneAU" target="_blank">Predicting Real Estate Prices in Melbourne, AU</a></li>
+                <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/06_VisualizationsUsing_Tableau-R-Pyton" target="_blank">Visualizations using Tableau, R, and Python</a></li>
+                <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/07_BuildHadoopEcosystem_onVM" target="_blank">Building the Hadoop Ecosystem on a VM</a></li>
+                <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/08_CreditCardFraudDetection_SyntheticDatasets" target="_blank">Credit Card Fraud Detection with a Synthetic Dataset</a></li>
+                <li><a href="https://github.com/LincolnBrownBellevue/Portfolio" target="_blank">Project 9</a></li>
+                <li><a href="https://github.com/LincolnBrownBellevue/Portfolio" target="_blank">Project 10</a></li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email: LincolnBrown@example.com</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/LincolnBrown/" target="_blank">linkedin.com/in/LincolnBrown</a></p>
+        </div>
+    </section>
+    
     <footer>
         <p>© 2024 Lincoln Brown. All rights reserved.</p>
     </footer>
