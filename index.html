@@ -5,6 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lincoln Brown - Portfolio</title>
     <style>
+        input[type='email'], textarea {
+            width: 100%;
+            max-width: 400px;
+            height: 40px;
+            padding: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px; 
+            resize: vertical;
+        }
+
+        label { 
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px; 
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45A049;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -77,8 +109,13 @@
     
     <section id="about">
         <div class="container">
+            <br><br>
             <h2>About Me</h2>
-            <p>Welcome to my portfolio! I am a data scientist passionate about machine learning, data visualization, and big data processing.</p>
+            <p>Welcome to my portfolio!<br> 
+            I am a data scientist passionate about machine learning, data visualization, and big data processing.</p>
+            <p>I'm currently employed as a Chief Information Security Officer at a financial institution.</p>
+
+
         </div>
     </section>
     
@@ -103,18 +140,17 @@
     <section id="contact">
         <div class="container">
             <h2>Contact</h2>
-            <p>Email: LincolnBrown@example.com</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/LincolnBrown/" target="_blank">linkedin.com/in/LincolnBrown</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/lincolnrbrown/" target="_blank">linkedin.com/in/LincolnBrown</a></p>
             <p>Let's get in touch! Send me an email below:</p>
             <br>
             <form action="https://formspree.io/f/xwpvbwbo" method="POST">
                 <label>
-                    Your email:
+                    Your email:<br>
                     <input type="email" name="email">
                 </label>
                 <br>
                 <label>
-                    Your message:
+                    Your message:<br>
                     <textarea name="message"></textarea>
                 </label>
                 <!-- your other form fields go here -->
