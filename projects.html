@@ -65,28 +65,119 @@
             padding: 10px 0;
             margin-top: 20px;
         }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background: #f8f8f8;
+            border: 2px solid #4CAF50;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background: #0056b3;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>My Projects</h1>
     </header>
+    <section id="projects">
+        <div class="container">
 
-    <div class="container">
-        <h2>Explore My Work</h2>
-        <a class="project-button" href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/01_ForecastingPricesQuadraticModel" target="_blank">Forecasting Prices with Quadratic Model</a>
-        <a class="project-button" href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/02_MoonPhaseEffects_onCrime" target="_blank">Effects of Moon Phase on Crime</a>
-        <a class="project-button" href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/03_HyperparameterTuning_MLModels" target="_blank">Hyperparameter Tuning on ML Models</a>
-        <a class="project-button" href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/04_PredictingRealEstatePrices_KimballNE" target="_blank">Predicting Real Estate Prices in Kimball, NE</a>
-        <a class="project-button" href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/05_PredictingRealEstatePrices_MelbourneAU" target="_blank">Predicting Real Estate Prices in Melbourne, AU</a>
-        <a class="project-button" href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/06_VisualizationsUsing_Tableau-R-Pyton" target="_blank">Visualizations using Tableau, R, and Python</a>
-        <a class="project-button" href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/07_BuildHadoopEcosystem_onVM" target="_blank">Building the Hadoop Ecosystem on a VM</a>
-        <a class="project-button" href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/08_CreditCardFraudDetection_SyntheticDatasets" target="_blank">Credit Card Fraud Detection with a Synthetic Dataset</a>
-        <a class="project-button" href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/09_PredictingAppUsage" target="_blank">Predicting App Usage</a>
-        <a class="project-button" href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/10_PhishingEmailDetection" target="_blank">Phishing Email Detection</a>
+            <div class="project-card">
+                <h3>Forecasting Prices with Quadratic Model</h3>
+                <p>This project explores time-series analysis by modeling daily prices using linear and quadratic regression. The dataset was developed by Zachary M. Jones, who studies the black market for cannabis in the US. The dataset is composed of information pertaining to marijuana where users report the price, quantity, quality, and location of cannabis transactions. The goal is to analyze the variability in prices over time, generate predictions, and test for serial correlation in the data and model residuals. The analysis leverages statistical and visualization tools to assess model performance and interpret results.</p>
+                <a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/01_ForecastingPricesQuadraticModel" class="button" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>Effects of Moon Phase on Crime</h3>
+                <p>This Jupyter Notebook contains analysis on whether or not the moon phase cycle has any effect on crime. The data is stored in sqlite3 to demonstrate the use of a SQL database for storing and retrieving data. The dataset contains the moon phase cycles for the relevant time period as well as crime statistics for Chicago, IL.</p>
+            <a href="https://github.com/MyNameBellevue/Portfolio/tree/main/02_MoonPhaseEffects_onCrime" class="button" target="_blank">View on GitHub</a>
+            </div>
 
-        <a class="back-button" href="index.html">Back to Home</a>
-    </div>
+            <div class="project-card">
+                <h3>Hyperparameter Tuning on ML Models</h3>
+                <p>This Jupyter Notebook contains an analysis of loan approval prediction using machine learning techniques. The dataset includes applicant attributes including income, education, credit history, and property area. The goal of this project is to preprocess the data, apply classification models, and determine the best-performing model for predicting loan approval status.</p>
+                <a href="https://github.com/MyNameBellevue/Portfolio/tree/main/03_HyperparameterTuning_MLModels" class="button" target="_blank">
+                    View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Predicting Real Estate Prices in Kimball, NE</h3>
+                <p>This project aims to predict the sale price of houses in Kimball, NE using features such as size and location. The data was obtained from the Kimball, NE County Assessor's GIS website. The primary object is to gain a better understading of real estate market conditions. A predictive model using publicly available data provides insights into a house's value, assisting in purchasing or selling decisions.</p>
+                <a href="https://github.com/MyNameBellevue/Portfolio/tree/main/04_PredictingRealEstatePrices_KimballNE" class="button" target="_blank">View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Predicting Real Estate Prices in Melbourne, AU</h3>
+                <p>This project analyzes the Melbourne housing market using a dataset that includes various features such as price, location, property type, and other characteristics. The goal is to uncover trends, perform exploratory data analysis (EDA), and build predictive models for housing prices.</p>
+                <a href="https://github.com/MyNameBellevue/Portfolio/tree/main/05_PredictingRealEstatePrices_MelbourneAU" class="button" target="_blank">View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Visualizations using Tableau, R, and Python</h3>
+                <p>These powerpoints illustrate the creation of various types of graphs in Tableau, R, and Python. The accompanying code is included in the presentations.</p>
+                <a href="https://github.com/MyNameBellevue/Portfolio/tree/main/06_VisualizationsUsing_Tableau-R-Pyton" class="button" target="_blank">View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Building the Hadoop Ecosystem on a VM</h3>
+                <p>The purpose of this project is to demonstrate familiarity with the Spark ecosystem and ingesting data.</p>
+                <a href="https://github.com/MyNameBellevue/Portfolio/tree/main/07_BuildHadoopEcosystem_onVM" class="button" target="_blank">View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Credit Card Fraud Detection with a Synthetic Dataset</h3>
+                <p>This project investigates the usage of machine learing models to detect credit card fraud using a synthetic dataset. The ML models created and evaluated for predicting credit card fraud are a Random Forest model and a Long Short-Term Memory (LSTM) model.</p>
+                <a href="https://github.com/MyNameBellevue/Portfolio/tree/main/08_CreditCardFraudDetection_SyntheticDatasets" class="button" target="_blank">View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Predicting App Usage</h3>
+                <p>This project aims to provide actionable insights by identifying key factors associated with app usage time. Key analysis will focus on the correlation between features such as screen-on time, daily data consumption, age, gender, operating system, and device model to determine which factors are most important for predicting app usage time. The target feature for the analysis is the ‘App Usage Time (MB/Day)’ feature. There were three models created for this project, a linear regression model, random forest regression model, and an XGBoost regression model.</p>
+                <a href="https://github.com/MyNameBellevue/Portfolio/tree/main/09_PredictingAppUsage" class="button" target="_blank">View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Phishing Email Detection</h3>
+                <p>Emails are a popular platform for attackers to gain access to a network. Using phishing emails, malicious actors harvest user credentials which they can then use to gain access to sensitive information or to impersonate the end user and continue their attack on associated businesses and entities. Phishing emails are a wide-spread business problem and can be a critical vector of attack for data breaches. This project is focused on producing a model that can be used to strengthen phishing detection using models trained on data obtained from Kaggle. This project will develop and evaluate the performance of two models: a Logistic Regression model and a Bidirectional Encoder Representation from Transformers (BERT) model.</p>
+                <a href="https://github.com/MyNameBellevue/Portfolio/tree/main/10_PhishingEmailDetection" class="button" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <p>© 2024 My Name. All rights reserved.</p>
