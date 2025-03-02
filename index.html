@@ -5,89 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lincoln Brown - Portfolio</title>
     <style>
-        input[type='email'], textarea {
-            width: 100%;
-            max-width: 400px;
-            height: 40px;
-            padding: 10px;
-            font-size: 16px;
-            box-sizing: border-box;
-        }
-        textarea {
-            height: 100px; 
-            resize: vertical;
-        }
-
-        label { 
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        button {
-            margin-top: 10px;
-            padding: 10px 20px; 
-            font-size: 16px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #45A049;
-        }
-
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             text-align: center;
             background-color: #f4f4f9;
             color: #333;
-            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
         }
         header {
             background-color: #4CAF50;
             color: white;
-            padding: 20px 0;
+            padding: 20px;
             position: fixed;
             width: 100%;
             top: 0;
             left: 0;
             z-index: 1000;
         }
-        header nav {
-            margin-top: 10px;
-        }
-        header nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        header nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            padding: 80px 20px;
-        }
         .container {
             max-width: 900px;
             margin: auto;
+            padding: 100px 20px 20px;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 10px 0;
-        }
-        a {
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 8px;
+            transition: 0.3s;
             text-decoration: none;
-            color: #4CAF50;
         }
-        a:hover {
-            text-decoration: underline;
+        .btn:hover {
+            background: #45A049;
         }
         footer {
             background-color: #4CAF50;
@@ -95,68 +50,82 @@
             padding: 10px 0;
             margin-top: 20px;
         }
+        .contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 400px;
+        margin: auto;
+        }
+        .input-group {
+            width: 100%;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .input-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .input-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45A049;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Lincoln Brown</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Work/Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
     </header>
     
-    <section id="about">
-        <div class="container">
-            <br><br>
-            <h2>About Me</h2>
-            <p>Welcome to my portfolio!<br> 
-            I am a data scientist passionate about machine learning, data visualization, and big data processing.</p>
-            <p>I'm currently employed as a Chief Information Security Officer at a financial institution.</p>
-
-
-        </div>
+    <section class="container">
+        <h2>About Me</h2>
+        <p>Welcome to my portfolio!<br> 
+        I am a data scientist passionate about machine learning, data visualization, and big data processing.</p>
+        <p>I'm currently employed as a Chief Information Security Officer at a financial institution.</p>
     </section>
     
-    <section id="projects">
-        <div class="container">
-            <h2>My Projects</h2>
-            <ul>
-                <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/01_ForecastingPricesQuadraticModel" target="_blank">Forecasting Prices with Quadratic Model</a></li>
-                <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/02_MoonPhaseEffects_onCrime" target="_blank">Effects of Moon Phase on Crime</a></li>
-                <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/03_HyperparameterTuning_MLModels" target="_blank">Hyperparameter Tuning on ML Models</a></li>
-                <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/04_PredictingRealEstatePrices_KimballNE" target="_blank">Predicting Real Estate Prices in Kimball, NE</a></li>
-                <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/05_PredictingRealEstatePrices_MelbourneAU" target="_blank">Predicting Real Estate Prices in Melbourne, AU</a></li>
-                <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/06_VisualizationsUsing_Tableau-R-Pyton" target="_blank">Visualizations using Tableau, R, and Python</a></li>
-                <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/07_BuildHadoopEcosystem_onVM" target="_blank">Building the Hadoop Ecosystem on a VM</a></li>
-                <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/08_CreditCardFraudDetection_SyntheticDatasets" target="_blank">Credit Card Fraud Detection with a Synthetic Dataset</a></li>
-                <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/09_PredictingAppUsage" target="_blank">Predicting App Usage</a></li>
-                <li><a href="https://github.com/LincolnBrownBellevue/Portfolio/tree/main/10_PhishingEmailDetection" target="_blank">Phishing Email Detection</a></li>
-            </ul>
-        </div>
+    <section class="container">
+        <h2>Explore My Work</h2>
+        <a href="projects.html" class="btn">View My Projects</a>
     </section>
     
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/lincolnrbrown/" target="_blank">linkedin.com/in/LincolnBrown</a></p>
-            <p>Let's get in touch! Send me an email below:</p>
-            <br>
-            <form action="https://formspree.io/f/xwpvbwbo" method="POST">
-                <label>
-                    Your email:<br>
-                    <input type="email" name="email">
-                </label>
-                <br>
-                <label>
-                    Your message:<br>
-                    <textarea name="message"></textarea>
-                </label>
-                <!-- your other form fields go here -->
-                <button type="submit">Send</button>
-            </form>
-        </div>
+    <section class="container">
+        <h2>Contact</h2>
+        <a href="https://www.linkedin.com/in/MyName/" target="_blank" class="btn">Connect on LinkedIn</a>
+        <br>
+        <form action="https://formspree.io/f/xwpvbwbo" method="POST" class="contact-form">
+            <div class="input-group">
+                <label for="email">Your email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="message">Your message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
     </section>
     
     <footer>
